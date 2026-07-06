@@ -349,126 +349,142 @@ body{
 
 
    
+
+
 @media (max-width: 768px) {
     
-    /* 1. GLOBAL ADJUSTMENT */
+   
     body {
-        padding: 10px;
+        padding: 10px !important;
+        overflow-x: hidden !important;
     }
 
-    /* 2. NAVBAR FIXED*/
+   
     .navbar {
-        height: auto; 
-        padding: 15px;
-        flex-direction: column; 
-        gap: 15px;
-        border-radius: 20px;
+        height: auto !important; 
+        padding: 12px 10px !important;
+        flex-direction: column !important; 
+        gap: 8px !important;
+        border-radius: 20px !important;
+        width: 90% !important; 
+        margin: 0 auto !important; 
+        position: sticky !important;
+        top: 10px !important;
+        left: 0 !important;
+        right: 0 !important;
     }
     
     .navbar .nav-links {
-        display: flex;
-        flex-direction: row; 
-        gap: 25px; 
-        margin: 0;
-        padding: 0;
+        display: flex !important;
+        flex-direction: row !important; 
+        gap: 20px !important; 
+        margin: 8px 0 0 0 !important; 
+        padding: 0 !important;
+        justify-content: center !important;
     }
     
     .navbar .logo {
-        margin: 0;
-        font-size: 22px;
+        margin: 0 auto !important; 
+        font-size: 22px !important;
+        text-align: center !important;
     }
 
     /* 3. HERO SECTION FIXED */
     .hero-container {
-        margin-top: 130px; 
-        padding: 30px 20px;
-        border-radius: 30px;
+        margin-top: 100px !important; 
+        padding: 30px 20px !important;
+        border-radius: 30px !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
     }
     
     .hero-sec {
-        flex-direction: column-reverse; 
-        flex-direction: column; 
-        text-align: center;
-        gap: 30px;
+        display: flex !important;
+        flex-direction: column-reverse !important; 
+        text-align: center !important;
+        gap: 25px !important;
+        margin-top: 10px !important;
     }
     
     .hero-text {
-        align-items: center; 
+        align-items: center !important; 
+        gap: 15px !important;
     }
 
-    /* 4. TEXT SIZES FIXED (අකුරු සයිස් අඩු කරා) */
     .hero-title {
-        font-size: 32px; 
+        font-size: 32px !important; 
+        margin-top: 10px !important; 
+        line-height: 1.2 !important;
     }
     
     .hero-p {
-        font-size: 15px;
-    }
-    
-    .sec-title, .w-header, .order-container h2 {
-        font-size: 26px;
+        font-size: 15px !important;
     }
 
-    /* 5. ORDER FORM ROW FIXED */
-    .form-row {
-        flex-direction: column;
-        gap: 0;
+    .hero-btn {
+        margin: 0 auto !important; 
+        padding: 12px 28px !important;
     }
-    /* 4. FLAVOURS SECTION FIXED */
+
+    .hero-image {
+        max-width: 100% !important;
+        margin: 0 auto !important;
+    }
+
+    .hero-image img {
+        max-width: 75% !important; 
+        height: auto !important;
+        margin: 0 auto !important;
+    }
+
+    
     .flavour-g {
-        grid-template-columns: 1fr !important; 
-        gap: 20px;
-        padding: 0 10px;
+        display: flex !important;
+        flex-direction: column !important; 
+        gap: 20px !important;
+        padding: 0 !important;
+        width: 100% !important;
     }
 
     .fl-card {
-        width: 100%; 
-        box-sizing: border-box;
+        width: 100% !important; 
+        box-sizing: border-box !important;
+        height: auto !important; 
     }
 
-    /* 5. WHY CHOOSE US SECTION FIXED */
-    .card-wcgrid {
-        grid-template-columns: 1fr !important; 
-        gap: 15px;
-        padding: 0 10px;
+    
+        display: flex !important;
+        flex-direction: column !important; 
+        gap: 15px !important;
+        padding: 0 !important;
+        width: 100% !important;
     }
 
     .c {
-        width: 100%;
-        box-sizing: border-box;
+        width: 100% !important;
+        box-sizing: border-box !important;
+        height: auto !important;
+    }
+    
+    .c .wt {
+        margin-top: 20px !important; 
     }
 
-    /* 6. WHATSAPP ORDER FORM SECTION FIXED */
+    /* 6. WHATSAPP ORDER FORM FIXED */
     .order-container {
-        padding: 25px 15px; 
-        border-radius: 20px;
-        margin: 40px auto; 
+        padding: 25px 15px !important; 
+        border-radius: 20px !important;
+        margin: 40px auto !important; 
+        width: 100% !important;
+        box-sizing: border-box !important;
     }
 
     .form-row {
-        flex-direction: column; 
-        gap: 0; 
+        flex-direction: column !important; 
+        gap: 0 !important; 
     }
 
     .input-group {
-        width: 100%;
-    }
-
-    /* NAVBAR MOBILE FIX */
-    nav {
-        padding: 10px 15px !important; 
-        margin: 10px !important; 
-        border-radius: 15px !important;
-    }
-
-    .nav-links {
-        gap: 15px !important; 
-    }
-
-    /* HERO SECTION IMAGE FIX */
-    .hero-image img {
-        max-width: 85% !important; 
-        height: auto !important;
-        margin-top: 15px !important;
+        width: 100% !important;
     }
 }
