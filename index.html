@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Akila Ice Cream</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">AIC</div>
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#flavour-sec">Flavour</a></li>
+            <li><a href="#order-section">Contact Us</a></li>
+        </ul>
+    </div>
+
+    <section class="hero-container">
+        <div class="hero-sec">
+            <div class="hero-text">
+                <h1 class="hero-title">Fresh Carnival Scoop</h1>
+                <p class="hero-p"> 🔸 HandMade Ice cream for Every Celebration <br>
+                Straight from Our stall
+                <br><br>
+                 🔸 Crafted with premium ingredients and bursting with unforgettable flavors, 
+                <br>our handcrafted ice cream turns every scoop into a moment of pure happiness.</p>
+                <a href="#order-section" style="text-decoration: none;"><button class="hero-btn">Contact Us</button></a>
+            </div>
+
+            <div class="hero-image">
+                <img src="Eiswaffel_mit_Karamell_Generative_AI___Premium_KI-generiertes_Bild-removebg-preview.png" alt="Delicious Ice Cream">
+            </div>
+        </div>
+    </section>
+
+    <section id="flavour-sec" class="flavour-sec">
+        <h2 class="sec-title">Our Popular Flavours</h2>
+        <div class="flavour-g">
+            <div class="fl-card">
+                <div class="fl-img">🍫</div>
+                <h3 class="flc-t">Double Chocolate</h3>
+                <p>Rich and creamy dark chocolate scoop</p>
+            </div>
+            <div class="fl-card">
+                <div class="fl-img">🍦</div>
+                <h3 class="flc-t">Classic Vanilla</h3>
+                <p>Smooth vanilla infused with fresh cream.</p>
+            </div>
+            <div class="fl-card">
+                <div class="fl-img">🍓</div>
+                <h3 class="flc-t">Strawberry Bliss</h3>
+                <p>Real strawberry chunks in every bite.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="wcu">
+        <h1 class="w-header">Why Choose Us ?</h1>
+        <div class="card-wcgrid">
+            <div class="c">
+                <h3 class="wt">🍦 Fresh Ingredients</h3>
+            </div>
+            <div class="c">
+                <h3 class="wt">🚚 Fast Delivery</h3>
+            </div>
+            <div class="c">
+                <h3 class="wt">❤️ Handmade with Love</h3>
+            </div>
+            <div class="c">
+                <h3 class="wt">⭐ Premium Quality</h3>
+            </div>
+        </div>
+    </section>
+    
+    <hr class="line">
+
+    <section id="order-section" class="order-section">
+        <div class="order-container">
+            <h2>Place Your Order</h2>
+            <p>Fill in your details and flavor choices below to order via WhatsApp.</p>
+
+            <form id="whatsappForm">
+                <div class="form-row">
+                    <div class="input-group">
+                        <label>YOUR NAME</label>
+                        <input type="text" id="userName" placeholder="e.g., Shamika" required>
+                    </div>
+                    <div class="input-group">
+                        <label>PHONE NUMBER</label>
+                        <input type="tel" id="userPhone" placeholder="e.g., 071234567" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="input-group">
+                        <label>SELECT FLAVOR</label>
+                        <select id="flavorType">
+                            <option value="Double Chocolate">Double Chocolate 🍫</option>
+                            <option value="Classic Vanilla">Classic Vanilla 🍦</option>
+                            <option value="Strawberry Bliss">Strawberry Bliss 🍓</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label>QUANTITY (Scoops)</label>
+                        <select id="quantity">
+                            <option value="1 Scoop">1 Scoop</option>
+                            <option value="2 Scoops">2 Scoops</option>
+                            <option value="3 Scoops or More">3 Scoops or More</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label>SPECIAL NOTES / DELIVERY ADDRESS</label>
+                    <textarea id="orderNotes" placeholder="Describe how you want your order or add your address..."></textarea>
+                </div>
+
+                <button type="button" class="whatsapp-submit-btn" onclick="sendToWhatsapp()">
+                    💬 ORDER VIA WHATSAPP
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <script>
+    function sendToWhatsapp() {
+        let phoneNumber = "947XXXXXXXX";
+
+        let name = document.getElementById('userName').value;
+        let phone = document.getElementById('userPhone').value;
+        let flavor = document.getElementById('flavorType').value;
+        let qty = document.getElementById('quantity').value;
+        let notes = document.getElementById('orderNotes').value;
+
+        if(name == "" || phone == "") {
+            alert("Please fill your Name and Phone Number!");
+            return;
+        }
+
+        let message = "*New Ice Cream Order* 🍦\n\n" +
+                      "*Name:* " + name + "\n" +
+                      "*Phone:* " + phone + "\n" +
+                      "*Flavor:* " + flavor + "\n" +
+                      "*Quantity:* " + qty + "\n" +
+                      "*Notes/Address:* " + notes;
+
+        let whatsappURL = "https://wa.me/" + phoneNumber + "?text=" + encodeURIComponent(message);
+        window.open(whatsappURL, '_blank');
+    } 
+
+    
+    document.querySelectorAll('.nav-links a, .hero-text a').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            if (this.getAttribute('href') === '#') return;
+            
+            e.preventDefault();
+
+            const targetId = this.getAttribute('href');
+            const targetSection = document.querySelector(targetId);
+
+            if (targetSection) {
+                const offset = 90; 
+                const bodyRect = document.body.getBoundingClientRect().top;
+                const elementRect = targetSection.getBoundingClientRect().top;
+                const elementPosition = elementRect - bodyRect;
+                const offsetPosition = elementPosition - offset;
+
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+    </script>
+</body>
+</html>
