@@ -351,50 +351,62 @@ body{
    
 
 
+/* =======================================================
+   පරණ @media කෑල්ල සම්පූර්ණයෙන්ම මකලා මේක විතරක් දාපන් මචං
+   ======================================================= */
+
 @media (max-width: 768px) {
     
-   
-    body {
-        padding: 10px !important;
+    /* 1. GLOBAL RESET (දකුණට ඇදගෙන යන එක සහ අනවශ්‍ය පෑඩින් සම්පූර්ණයෙන්ම නැති කලා) */
+    html, body {
+        width: 100% !important;
         overflow-x: hidden !important;
+        margin: 0 !important;
+        padding: 0 !important;
     }
 
-   
+    body {
+        padding: 10px 0 !important; /* උඩ-යට විතරක් පොඩි ඉඩක් දුන්නා */
+    }
+
+    /* 2. NAVBAR FIXED (මැදටම කරලා, Screen එකට Fit කලා) */
     .navbar {
-        height: auto !important; 
-        padding: 12px 10px !important;
+        display: flex !important;
         flex-direction: column !important; 
-        gap: 8px !important;
+        align-items: center !important;
+        justify-content: center !important;
+        height: auto !important; 
+        padding: 12px 0 !important;
         border-radius: 20px !important;
         width: 90% !important; 
-        margin: 0 auto !important; 
-        position: sticky !important;
-        top: 10px !important;
-        left: 0 !important;
-        right: 0 !important;
+        margin: 0 auto 20px auto !important; /* මැදට කරලා, පල්ලෙහායින් margin එකක් දුන්නා */
+        position: relative !important; /* Sticky එක මොබයිල් වලදී ලෙඩ දෙන නිසා Relative කරා */
+        top: 0 !important;
     }
     
     .navbar .nav-links {
         display: flex !important;
         flex-direction: row !important; 
-        gap: 20px !important; 
+        justify-content: center !important;
+        align-items: center !important;
+        gap: 15px !important; 
         margin: 8px 0 0 0 !important; 
         padding: 0 !important;
-        justify-content: center !important;
+        width: 100% !important;
     }
     
     .navbar .logo {
-        margin: 0 auto !important; 
+        margin: 0 !important; 
         font-size: 22px !important;
         text-align: center !important;
     }
 
     /* 3. HERO SECTION FIXED */
     .hero-container {
-        margin-top: 100px !important; 
-        padding: 30px 20px !important;
+        margin: 20px auto !important; 
+        padding: 30px 15px !important;
         border-radius: 30px !important;
-        width: 100% !important;
+        width: 90% !important;
         box-sizing: border-box !important;
     }
     
@@ -402,89 +414,133 @@ body{
         display: flex !important;
         flex-direction: column-reverse !important; 
         text-align: center !important;
-        gap: 25px !important;
-        margin-top: 10px !important;
+        gap: 20px !important;
+        margin-top: 0 !important;
     }
     
     .hero-text {
         align-items: center !important; 
-        gap: 15px !important;
+        gap: 10px !important;
     }
 
     .hero-title {
-        font-size: 32px !important; 
-        margin-top: 10px !important; 
+        font-size: 28px !important; 
+        margin-top: 15px !important; 
         line-height: 1.2 !important;
     }
     
     .hero-p {
-        font-size: 15px !important;
+        font-size: 14px !important;
+        padding: 0 10px !important;
     }
 
     .hero-btn {
-        margin: 0 auto !important; 
+        margin: 10px auto 0 auto !important; 
         padding: 12px 28px !important;
     }
 
     .hero-image {
+        width: 100% !important;
         max-width: 100% !important;
         margin: 0 auto !important;
     }
 
     .hero-image img {
-        max-width: 75% !important; 
+        max-width: 70% !important; 
         height: auto !important;
         margin: 0 auto !important;
     }
 
-    
+    /* 4. FLAVOURS SECTION FIXED (යටට එක පෙළට එන්න හැදුවා) */
+    .flavour-sec {
+        margin: 40px auto !important;
+        padding: 0 15px !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    .sec-title {
+        font-size: 26px !important;
+        margin-bottom: 25px !important;
+    }
+
     .flavour-g {
         display: flex !important;
         flex-direction: column !important; 
         gap: 20px !important;
         padding: 0 !important;
-        width: 100% !important;
+        width: 90% !important;
+        margin: 20px auto 0 auto !important;
     }
 
     .fl-card {
         width: 100% !important; 
         box-sizing: border-box !important;
         height: auto !important; 
+        padding: 20px !important;
     }
 
-    
+    /* 5. WHY CHOOSE US SECTION FIXED (යටට එක පෙළට එන්න හැදුවා) */
+    .wcu {
+        margin: 40px auto !important;
+        padding: 0 15px !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    .w-header {
+        font-size: 26px !important;
+        margin-bottom: 25px !important;
+    }
+
+    .card-wcgrid {
         display: flex !important;
         flex-direction: column !important; 
         gap: 15px !important;
         padding: 0 !important;
-        width: 100% !important;
+        width: 90% !important;
+        margin: 20px auto 0 auto !important;
     }
 
     .c {
         width: 100% !important;
         box-sizing: border-box !important;
         height: auto !important;
+        padding: 20px !important;
     }
     
     .c .wt {
-        margin-top: 20px !important; 
+        margin-top: 15px !important; 
     }
 
     /* 6. WHATSAPP ORDER FORM FIXED */
-    .order-container {
-        padding: 25px 15px !important; 
-        border-radius: 20px !important;
-        margin: 40px auto !important; 
+    .order-section {
+        margin: 40px auto !important;
+        padding: 0 15px !important;
         width: 100% !important;
         box-sizing: border-box !important;
+    }
+
+    .order-container {
+        padding: 25px 20px !important; 
+        border-radius: 25px !important;
+        width: 90% !important;
+        margin: 0 auto !important;
+        box-sizing: border-box !important;
+    }
+
+    .order-container h2 {
+        font-size: 26px !important;
     }
 
     .form-row {
         flex-direction: column !important; 
         gap: 0 !important; 
+        margin-bottom: 0 !important;
     }
 
     .input-group {
         width: 100% !important;
+        margin-bottom: 15px !important;
     }
 }
