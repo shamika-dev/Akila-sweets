@@ -360,13 +360,16 @@ body{
     /* 1. GLOBAL RESET (දකුණට ඇදගෙන යන එක සහ අනවශ්‍ය පෑඩින් සම්පූර්ණයෙන්ම නැති කලා) */
     html, body {
         width: 100% !important;
+        max-width: 100% !important;
         overflow-x: hidden !important;
         margin: 0 !important;
         padding: 0 !important;
+        box-sizing: border-box !important;
     }
 
     body {
-        padding: 10px 0 !important; /* උඩ-යට විතරක් පොඩි ඉඩක් දුන්නා */
+        padding-top: 15px !important;
+        padding-bottom: 30px !important;
     }
 
     /* 2. NAVBAR FIXED (මැදටම කරලා, Screen එකට Fit කලා) */
@@ -379,8 +382,8 @@ body{
         padding: 12px 0 !important;
         border-radius: 20px !important;
         width: 90% !important; 
-        margin: 0 auto 20px auto !important; /* මැදට කරලා, පල්ලෙහායින් margin එකක් දුන්නා */
-        position: relative !important; /* Sticky එක මොබයිල් වලදී ලෙඩ දෙන නිසා Relative කරා */
+        margin: 0 auto 20px auto !important; 
+        position: relative !important; 
         top: 0 !important;
     }
     
@@ -403,10 +406,11 @@ body{
 
     /* 3. HERO SECTION FIXED */
     .hero-container {
-        margin: 20px auto !important; 
+        margin: 10px auto 20px auto !important; 
         padding: 30px 15px !important;
         border-radius: 30px !important;
         width: 90% !important;
+        max-width: 90% !important;
         box-sizing: border-box !important;
     }
     
@@ -416,11 +420,13 @@ body{
         text-align: center !important;
         gap: 20px !important;
         margin-top: 0 !important;
+        width: 100% !important;
     }
     
     .hero-text {
         align-items: center !important; 
         gap: 10px !important;
+        width: 100% !important;
     }
 
     .hero-title {
@@ -451,59 +457,63 @@ body{
         margin: 0 auto !important;
     }
 
-    /* 4. FLAVOURS SECTION FIXED (යටට එක පෙළට එන්න හැදුවා) */
+    /* 4. FLAVOURS SECTION FIXED (GRID එක 1 තීරුවකට සීමා කලා) */
     .flavour-sec {
-        margin: 40px auto !important;
-        padding: 0 15px !important;
-        width: 100% !important;
+        margin: 30px auto !important;
+        padding: 0 !important;
+        width: 90% !important;
+        max-width: 90% !important;
         box-sizing: border-box !important;
     }
 
     .sec-title {
         font-size: 26px !important;
-        margin-bottom: 25px !important;
+        margin-bottom: 20px !important;
     }
 
     .flavour-g {
-        display: flex !important;
-        flex-direction: column !important; 
+        display: grid !important;
+        grid-template-columns: 1fr !important; /* එක පේළියට එක කාඩ් එකක් බැගින් යටට */
         gap: 20px !important;
         padding: 0 !important;
-        width: 90% !important;
-        margin: 20px auto 0 auto !important;
+        width: 100% !important;
+        margin: 0 auto !important;
     }
 
     .fl-card {
         width: 100% !important; 
+        max-width: 100% !important;
         box-sizing: border-box !important;
         height: auto !important; 
         padding: 20px !important;
     }
 
-    /* 5. WHY CHOOSE US SECTION FIXED (යටට එක පෙළට එන්න හැදුවා) */
+    /* 5. WHY CHOOSE US SECTION FIXED (GRID එක 1 තීරුවකට සීමා කලා) */
     .wcu {
-        margin: 40px auto !important;
-        padding: 0 15px !important;
-        width: 100% !important;
+        margin: 30px auto !important;
+        padding: 0 !important;
+        width: 90% !important;
+        max-width: 90% !important;
         box-sizing: border-box !important;
     }
 
     .w-header {
         font-size: 26px !important;
-        margin-bottom: 25px !important;
+        margin-bottom: 20px !important;
     }
 
     .card-wcgrid {
-        display: flex !important;
-        flex-direction: column !important; 
+        display: grid !important;
+        grid-template-columns: 1fr !important; /* පෙට්ටි 4ම ලස්සනට එකක් යට එකක් එන්න හැදුවා */
         gap: 15px !important;
         padding: 0 !important;
-        width: 90% !important;
+        width: 100% !important;
         margin: 20px auto 0 auto !important;
     }
 
     .c {
         width: 100% !important;
+        max-width: 100% !important;
         box-sizing: border-box !important;
         height: auto !important;
         padding: 20px !important;
@@ -515,16 +525,18 @@ body{
 
     /* 6. WHATSAPP ORDER FORM FIXED */
     .order-section {
-        margin: 40px auto !important;
-        padding: 0 15px !important;
-        width: 100% !important;
+        margin: 30px auto !important;
+        padding: 0 !important;
+        width: 90% !important;
+        max-width: 90% !important;
         box-sizing: border-box !important;
     }
 
     .order-container {
         padding: 25px 20px !important; 
         border-radius: 25px !important;
-        width: 90% !important;
+        width: 100% !important;
+        max-width: 100% !important;
         margin: 0 auto !important;
         box-sizing: border-box !important;
     }
