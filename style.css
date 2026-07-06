@@ -453,4 +453,22 @@ body{
     .input-group {
         width: 100%;
     }
+
+    /* NAVBAR MOBILE FIX */
+    nav {
+        padding: 10px 15px !important; /* Navbar එක ඇතුළේ උඩ-යට ඉඩ පොඩ්ඩක් අඩු කරා */
+        margin: 10px !important; /* වටේට පොඩි හිස්තැනක් තියලා ලස්සන කරා */
+        border-radius: 15px !important;
+    }
+
+    .nav-links {
+        gap: 15px !important; /* Home, Flavour අතර තියෙන අනවශ්‍ය ලොකු ඉඩ ප්‍රමාණය අඩු කරා */
+    }
+
+    /* HERO SECTION IMAGE FIX */
+    .hero-image img {
+        max-width: 85% !important; /* අයිස්ක්‍රීම් ෆොටෝ එක ෆෝන් එකට ගැලපෙන්න පොඩ්ඩක් කුඩා කරා කපෙන්නේ නැති වෙන්න */
+        height: auto !important;
+        margin-top: 15px !important;
+    }
 }
